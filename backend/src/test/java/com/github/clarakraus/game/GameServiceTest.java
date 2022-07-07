@@ -34,9 +34,6 @@ class GameServiceTest {
 
         Assertions.assertThat(result).isEqualTo(expected);
 
-
-
     }
-
 
 }
