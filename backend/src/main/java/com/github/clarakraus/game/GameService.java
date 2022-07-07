@@ -14,7 +14,34 @@ public class GameService {
         };
     }
 
-    public String validate(ChoiceEnum given, ChoiceEnum answer) {
-        re
+    public ResultDTO validate(ChoiceEnum player1, ChoiceEnum player2) {
+        ResultDTO result = new ResultDTO();
+
+        switch(player1) {
+            case ROCK -> {
+                if(player2.equals(ChoiceEnum.SCISSORS)){
+                    result.setPlayer1("win");
+                    result.setPlayer2("lose");
+                    break;
+                } else if(player2.equals(ChoiceEnum.PAPER)) {
+                    result.setPlayer1("lose");
+                    result.setPlayer2("win");
+                    break;
+                } else {
+
+                }
+            }
+            case PAPER -> {
+                if(player2.equals(ChoiceEnum.SCISSORS)){
+                    result.setPlayer1("win");
+                    result.setPlayer2("lose");
+                    break;
+                } else if(player2.equals(ChoiceEnum.PAPER)) {
+                    result.setPlayer1("lose");
+                    result.setPlayer2("win");
+                    break;
+                }
+            }
+
     }
 }

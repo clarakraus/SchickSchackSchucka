@@ -24,9 +24,17 @@ class GameServiceTest {
 
     @Test
     void shouldTestPaperVsRockAndPaperShouldWin(){
-
+        ChoiceEnum player1 = ChoiceEnum.PAPER;
+        ChoiceEnum player2 = ChoiceEnum.ROCK;
         GameService gameService = new GameService();
-        ResultDTO result = gameService.validate(ChoiceEnum.PAPER, ChoiceEnum.ROCK);
+
+        ResultDTO result = gameService.validate(player1, player2);
+
+        ResultDTO expected = ResultDTO.builder().player1("win").player2("lose").build();
+
+        Assertions.assertThat(result).isEqualTo(expected);
+
+
 
     }
 
