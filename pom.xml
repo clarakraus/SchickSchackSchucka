@@ -8,10 +8,10 @@
 		<version>2.7.0</version>
 		<relativePath/>
 	</parent>
-	<groupId>com.github.gossie</groupId>
-	<artifactId>spring-boot-react-bundle-parent</artifactId>
+	<groupId>com.github.clarakraus</groupId>
+	<artifactId>schickschackschucka-parent</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-boot-react-bundle-parent</name>
+	<name>schickschackschucka-parent</name>
 	<packaging>pom</packaging>
 	
 	<properties>
