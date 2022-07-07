@@ -22,4 +22,13 @@ class GameServiceTest {
         Assertions.assertThat(choices).contains(actual);
     }
 
+    @Test
+    void shouldTestPaperVsRockAndPaperShouldWin(){
+
+        GameService gameService = new GameService();
+        ResultDTO result = gameService.validate(ChoiceEnum.PAPER, ChoiceEnum.ROCK);
+
+    }
+
+
 }
