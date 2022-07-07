@@ -59,6 +59,7 @@ public class GameService {
         return result;
     }
 
+
     public ResultDTO playAgainstBot(String player1Choice) {
         ChoiceEnum player1Enum = ChoiceEnum.valueOf(player1Choice);
         ChoiceEnum botEnum = getRandomChoice();

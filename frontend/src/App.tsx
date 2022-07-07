@@ -1,26 +1,26 @@
 import React, { useState, useEffect } from 'react';
+import {playAgainstBot} from "./service/apiServices";
 
-function App() {
+export default function App() {
 
-    const [greeting, setGreeting] = useState('')
+    const [message, setMessage] = useState("");
 
-    useEffect(() => {
-        fetch('/api/greeting', {
-            method: 'GET',
-            headers: {
-                'Accept': 'text/plain'
-            }
-        })
-            .then(response => response.text())
-            .then(text => setGreeting(text))
-            .catch(err => setGreeting('Da ist etwas schief gelaufen'));
-    }, []);
+    function playGame(choice: string){
+        playAgainstBot(choice)
+            .then(data => setMessage(data.player1))
+    }
 
-    return (
+    return(
         <div>
-            {greeting}
+            <h1>Schickschackschuckapp</h1>
+            <button onClick={()=>playGame("rock")}>Rock</button>
+            <button onClick={()=>playGame("scissors")}>Scissors</button>
+            <button onClick={()=>playGame("paper")}>Paper</button>
+            {message && <h2>{message}</h2>}
         </div>
-    );
-}
+    )
 
-export default App;
+
+
+
+}
